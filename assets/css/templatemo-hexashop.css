@@ -652,13 +652,15 @@ banner
 
 .main-banner {
   border-bottom: 3px dotted #eee;
-  padding-top: 160px;
-  padding-bottom: 30px;
+  padding-top: 110px;
+  /* padding-bottom: 30px; */
+  padding-bottom: 35px;
 }
 
 .main-banner .left-content .thumb img {
   width: 100%;
   overflow: hidden;
+  height: auto; /* Maintain aspect ratio */
 }
 
 .main-banner .left-content .inner-content {
@@ -809,16 +811,22 @@ Men
   font-size: 13px;
 }
 
+
 #men .item .thumb .hover-content {
   position: absolute;
   z-index: 2;
-  text-align: center;
+  left: 50%; /* Position from the center */
+  transform: translateX(-50%);
   bottom: -60px;
-  width: 100%;
   opacity: 0;
   visibility: hidden;
-  transition: all .5s;
+  text-align: center; /* Center align the content */
+  width: 100%; /* Full width */
+  transition: all 0.5s ease;
+  margin-left: 70px;
 }
+
+
 
 #men .item .thumb:hover .hover-content {
   bottom: 30px;
@@ -828,6 +836,7 @@ Men
 
 #men .item .thumb {
   position: relative;
+
 }
 
 #men .item .thumb .hover-content ul li {
@@ -979,6 +988,7 @@ Women
   opacity: 0;
   visibility: hidden;
   transition: all .5s;
+  margin-left: 70px;
 }
 
 #women .item .thumb:hover .hover-content {
@@ -1139,6 +1149,7 @@ Kids
   opacity: 0;
   visibility: hidden;
   transition: all .5s;
+  margin-left: 70px;
 }
 
 #kids .item .thumb:hover .hover-content {
@@ -1471,7 +1482,7 @@ Subscribe
 }
 
 .subscribe ul li {
-  margin-bottom: 30px;
+  margin-bottom: 14px;
   display: block;
 }
 
@@ -1493,12 +1504,25 @@ Subscribe
 }
 
 
+
+.col-6 {
+
+  margin-bottom: 18px; 
+}
+
+.row {
+  margin-bottom: 30px; /* Adjust space between rows if necessary */
+}
+
 /* 
 ---------------------------------------------
 footer
 --------------------------------------------- 
 */
 
+
+
+/* Footer styles */
 footer {
   margin-top: 60px;
   padding: 60px 0px 30px 0px;
@@ -1509,16 +1533,25 @@ footer .logo {
   margin-bottom: 20px;
 }
 
+footer ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
 footer ul li {
-  display: block;
-  margin-bottom: 10px;
+  margin-bottom: 15px; /* Adjust this value to increase space between rows */
 }
 
 footer ul li a {
   font-size: 14px;
   color: #fff;
   transition: all .3s;
+  display: block; /* Ensures each link is treated as a block element */
 }
+ footer ul{
+  display: block;
+ }
 
 footer ul li a:hover {
   color: #aaa;
@@ -1532,6 +1565,7 @@ footer h4 {
   margin-bottom: 20px;
 }
 
+ 
 footer .under-footer {
   margin-top: 30px;
   padding-top: 30px;
@@ -1574,12 +1608,16 @@ Products Page
 */
 
 .page-heading {
-  margin-top: 160px;
+  margin-top: 110px;
   margin-bottom: 30px;
-  background-image: url(../images/products-page-heading.jpg);
+/*    background-image: url(../images/products-page-heading.jpg);  */
+background-image: url(../images/about-us-page-heading.jpg); 
+
+  
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
+
 }
 
 .page-heading .inner-content {
@@ -1657,6 +1695,7 @@ Products Page
   opacity: 0;
   visibility: hidden;
   transition: all .5s;
+  margin-left: 70px;
 }
 
 #products .item .thumb:hover .hover-content {
@@ -1692,6 +1731,7 @@ Products Page
 #products .pagination ul {
   text-align: center;
   width: 100%;
+  margin-left: 400px;
 }
 
 #products .pagination ul li {
@@ -1730,7 +1770,15 @@ Single Product Page
 }
 
 #product .left-images img {
-  width: 100%;
+   width: 100%; 
+/*   margin-left: 150px; */
+  overflow: hidden;
+  margin-bottom: 30px;
+}
+#product .left-image img {
+  /* width: 100%; */
+  
+  margin-left: 300px;
   overflow: hidden;
   margin-bottom: 30px;
 }
@@ -1913,12 +1961,13 @@ About Us Page
 */
 
 .about-page-heading {
-  margin-top: 160px;
-  margin-bottom: 30px;
-  background-image: url(../images/about-us-page-heading.jpg);
+  margin-top: 110px;
+  margin-bottom: 30px; 
+  /* background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/about-us-page-heading.jpg'); */
+   /* background-image: url(../images/about-us-page-heading.jpg);  */
   background-position: center center;
   background-size: cover;
-  background-repeat: no-repeat;
+  background-repeat: no-repeat; 
 }
 
 .about-us {
@@ -2049,6 +2098,7 @@ About Us Page
   text-align: center;
   width: 100%;
   transform: translateY(-22px);
+  margin: 70px;
 }
 
 .our-team .team-item .thumb .hover-effect .inner-content ul li {

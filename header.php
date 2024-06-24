@@ -12,49 +12,13 @@
     <title>Hexashop Ecommerce HTML CSS Template</title>
 
 <?php wp_head(); ?>
-    <!-- Additional CSS Files -->
-   <!--  <link rel="stylesheet" type="text/css" href="wp-content/themes/hexashopWS/assets/css/bootstrap.min.css">
-
-    <link rel="stylesheet" type="text/css" href="assets/css/font-awesome.css">
-
-    <link rel="stylesheet" href="assets/css/templatemo-hexashop.css">
-
-    <link rel="stylesheet" href="assets/css/owl-carousel.css">
-
-    <link rel="stylesheet" href="assets/css/lightbox.css"> -->
-<!--
-
-TemplateMo 571 Hexashop
-
-https://templatemo.com/tm-571-hexashop
-
--->
+    
     </head>
     bhggbh
 <?php
   wp_head();
 ?>
-<!--       ***** Header Area Start *****
-      <header class="header-area header-sticky">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                <img src="/assets/images/logo.png" alt="Left Banner Image">
 
-    wp_nav_menu(array(
-    'theme_location' => 'primary',
-    'container' => 'nav',
-    'container_class' => 'main-menu',
-    'menu_class' => 'nav-menu',
-  ));
-
-
-                  
-                    
-                </div>
-            </div>
-        </div>
-    </header> -->
 
     <!-- ***** Header Area Start ***** -->
 <header class="header-area header-sticky">
@@ -123,9 +87,23 @@ class Walker_Nav_Menu_Dropdown extends Walker_Nav_Menu {
               'container' => 'nav',
               'container_class' => 'main-menu',
               'menu_class' => 'nav-menu',
-              'walker' => new Walker_Nav_Menu_Dropdown()
+              'walker' => new Walker_Nav_Menu_Dropdown(),
+              //'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s</ul>', // Add an ID to the UL
+                  // 'items_wrap' => '<ul id="menu-menu-1" class="%2$s">%3$s</ul>'
             ));
           ?>
+
+ <!-- Additional navigation links -->
+ <!-- <nav class="navbar">
+            <ul>
+              <li><a href="#men">Men</a></li>
+              <li><a href="#women">Women</a></li>
+              <li><a href="#kids">Kids</a></li>
+            </ul>
+          </nav> -->
+
+
+
         </div>
       </div>
     </div>
